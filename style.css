@@ -1,0 +1,42 @@
+body {
+    margin: 0; padding: 0;
+    font-family: sans-serif;
+}
+
+#game_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+#aside {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#upgrades_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#upgrades_wrapper .upgrade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+
+#display {
+    font-size: 2em;
+}
