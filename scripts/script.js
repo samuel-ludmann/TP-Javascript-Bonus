@@ -13,7 +13,7 @@ setInterval(() => {
 
 const UPGRADES = [
     {
-        name: "click",
+        name: "Click",
         description: "Améliorer le click",
         upgrade_count: 0,
         get_price: (u) => {
@@ -45,9 +45,9 @@ UPGRADES.forEach((upgrade) => {
     var upgradeEl = `<div class="upgrade" data-upgrade="${upgrade.name}">
         <div class="upgrade_name">${upgrade.name}</div>
         <div class="upgrade_description">${upgrade.description}</div>
-        <div class="upgrade_price">${upgrade.get_price(upgrade)}</div>
+        <div class="upgrade_price">${upgrade.get_price(upgrade)} sc</div>
         <button class="buy_upgrade">Acheter</button>
-        <div class="upgrade_count">0</div>
+        <div class="upgrade_count"></div>
     </div>`
 
     upgrades_wrapper.insertAdjacentHTML('beforeend', upgradeEl);
@@ -65,8 +65,8 @@ UPGRADES.forEach((upgrade) => {
             display.innerText = counter;
             upgrade.on_buy(upgrade);
             upgrade.upgrade_count++;
-            countElement.innerText = upgrade.upgrade_count;
-            priceElement.innerText = upgrade.get_price(upgrade);
+            countElement.innerText = "x" + upgrade.upgrade_count;
+            priceElement.innerText = upgrade.get_price(upgrade) + " sc";
         }
     });
 
