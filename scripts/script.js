@@ -6,6 +6,11 @@ var counter = 0;
 var click_amount = 1;
 var auto_click = 0;
 
+setInterval(() => {
+    counter += auto_click;
+    display.innerText = counter;
+}, 1000);
+
 const UPGRADES = [
     {
         name: "click",
@@ -23,7 +28,7 @@ const UPGRADES = [
         description: "Augmentez les clicks/s",
         upgrade_count: 0,
         get_price: (u) => {
-            return 100 + auto_click * u.upgrade_count
+            return 50 + u.upgrade_count * 15
         },
         on_buy: (u) => {
             auto_click += 1

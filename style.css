@@ -10,6 +10,13 @@ body {
     height: 100vh;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
 #main {
     display: flex;
     flex-direction: column;
